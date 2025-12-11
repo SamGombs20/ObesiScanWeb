@@ -1,6 +1,6 @@
 'use client';
 import Image from "next/image";
-import style from "./navbar.module.css"
+import style from "../styles/navbar.module.css"
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 const Navbar = () => {
