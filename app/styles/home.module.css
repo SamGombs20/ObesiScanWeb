@@ -74,14 +74,26 @@
     width: 250px;
     margin-bottom: 1rem;
 }
+.how_components_container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
 
 .how_component {
     background-color: var(--custom-brown);
-    max-width: 380px;
+    max-width: 400px;
+    min-width: 380px;
     color: white;
     padding: 1rem 0.8rem;
     border-radius: 1rem;
-    margin: 0.5rem;
+    margin: 1rem;
+}
+.transparent{
+    background-color: transparent;
+    color: var(--custom-brown);
+    border: 1px solid;
 }
 
 .how_content_title {
@@ -94,6 +106,7 @@
     width: fit-content;
     border-bottom: 1px solid;
 }
+
 
 .how_component ul {
     list-style: "- ";

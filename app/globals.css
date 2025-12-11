@@ -6,6 +6,7 @@
 
 :root {
   --background: #ffffff;
+  --title-font:var(--font-poppins);
   --foreground: #171717;
   --custom-dark-green: #006400;
   --custom-dark-green-a: #FF006400;
@@ -38,4 +39,7 @@ body {
   background: var(--background);
   color: white;
   font-family: Arial, Helvetica, sans-serif;
+}
+.title-text{
+  font-family: var(--font-poppins);
 }
