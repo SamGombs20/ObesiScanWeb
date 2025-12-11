@@ -1,13 +1,18 @@
 .intro_main_container {
     background: linear-gradient(135deg, var(--custom-brown), var(--custom-dark-green));
-    padding-top: 10rem;
+    /* padding-top: 10rem; */
     padding-bottom: 5rem;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .intro_container {
     max-width: 1120px;
     margin-left: auto;
     margin-right: auto;
+    
     padding: 1rem;
 }
 
