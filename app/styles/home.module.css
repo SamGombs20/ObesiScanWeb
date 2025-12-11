@@ -1,32 +1,37 @@
-.intro_container{
+.intro_container {
     max-width: 1120px;
     margin-top: 10rem;
     margin-left: auto;
     margin-right: auto;
     padding: 1rem;
 }
-.intro_text{
+
+.intro_text {
     font-size: 2.5rem;
     color: var(--custom-brown);
-    
-    
+
+
 }
-.intro_text span{
+
+.intro_text span {
     color: var(--custom-dark-green);
     font-weight: 600;
 }
-.check_container{
+
+.check_container {
     margin-top: 2rem;
     border: 1px solid var(--custom-brown);
     border-radius: 1rem;
     padding: 2rem;
     max-width: 800px;
 }
-.check_title{
+
+.check_title {
     font-size: 2rem;
     margin-bottom: 0.5rem;
 }
-.check_btn{
+
+.check_btn {
     margin-top: 3rem;
     padding: 8px 20px;
     border-radius: 1.5rem;
@@ -37,7 +42,31 @@
     cursor: pointer;
     transition: all 0.3s ease;
 }
-.check_btn:hover{
+
+.check_btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 30px #ff8c4558;
+}
+
+.how_container {
+    margin-top: 5rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, var(--custom-brown), var(--custom-dark-green));
+
+    color: white;
+}
+
+.how_container .container {
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+}
+
+.title_text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    border-bottom: 4px solid white;
+    width: 250px;
+    margin-bottom: 1rem;
 }
