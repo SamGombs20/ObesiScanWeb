@@ -1,3 +1,4 @@
+'use-client'
 import Image from "next/image";
 import style from "../styles/footer.module.css"
 import Link from "next/link";
@@ -13,9 +14,9 @@ const Footer = () => {
                 <div className={style.nav_links}>
                     <p className={style.title}>Quick links</p>
                     <div className={style.footer_links}>
-                        <Link href="/"><p>Quick Check</p></Link>
-                        <Link href="/blog"><p>Blog</p></Link>
-                        <Link href="/about"><p>About</p></Link>
+                        <Link href="/" className={style.footer_link}>Quick Check</Link>
+                        <Link href="/blog" className={style.footer_link}><p>Blog</p></Link>
+                        <Link href="/about" className={style.footer_link}><p>About</p></Link>
                     </div>
                 </div>
             </div>
