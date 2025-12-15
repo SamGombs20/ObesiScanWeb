@@ -3,6 +3,7 @@ import { GiAwareness, GiMeal } from "react-icons/gi"
 import style from "./styles/home.module.css"
 import { BsPersonCircle } from "react-icons/bs"
 import { PiPersonSimpleBikeFill } from "react-icons/pi"
+import Image from "next/image"
 export default function Main (){
   const onButtonClick =()=>{
     alert("Button clicked")
@@ -15,6 +16,44 @@ export default function Main (){
         <div className={style.check_container}>
           <p className={style.check_title}>Quickly check your obesity level</p>
           <p>We collect anonymous data of your personal, physical, diet and lifestyle information.</p>
+          <div className={style.check_components}>
+            <div className={style.check_component}>
+              <Image
+              src="/personal_details.webp"
+              width={80}
+              height={80}
+              alt=""
+              />
+              <p className={`${style.check_component_title} gradient-text`}>Personal Details</p>
+            </div>
+            <div className={style.check_component}>
+              <Image
+              src="/meal.webp"
+              width={80}
+              height={80}
+              alt=""
+              />
+              <p className={`${style.check_component_title} gradient-text`}>Eating Habits</p>
+            </div>
+            <div className={style.check_component}>
+              <Image
+              src="/personal_details.webp"
+              width={80}
+              height={80}
+              alt=""
+              />
+              <p className={`${style.check_component_title} gradient-text`}>Personal Details</p>
+            </div>
+            <div className={style.check_component}>
+              <Image
+              src="/personal_details.webp"
+              width={80}
+              height={80}
+              alt=""
+              />
+              <p className={`${style.check_component_title} gradient-text`}>Personal Details</p>
+            </div>
+          </div>
           <button onClick={onButtonClick} className={style.check_btn}>Check now!</button>
         </div>
       </div>

@@ -57,8 +57,33 @@
     cursor: pointer;
     transition: all 0.3s ease;
 }
+.check_components{
+    margin-top: 2rem;
+    display: flex;
+    max-width: 500px;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-evenly;
+}
+.check_component{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    width: 130px;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+.check_component:hover{
+    cursor: pointer;
 
-.check_btn:hover {
+}
+.check_component_title{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.check_btn:hover, .check_component:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 30px #ff8c4558;
 }

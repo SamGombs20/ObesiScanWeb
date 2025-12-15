@@ -44,3 +44,9 @@ body {
 .title-text{
   font-family: var(--font-poppins);
 }
+.gradient-text {
+  background: linear-gradient(200deg, var(--custom-brown), var(--custom-dark-green));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
