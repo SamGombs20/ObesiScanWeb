@@ -34,6 +34,7 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 2rem;
+    gap: 3rem;
 }
 
 .check_container {
@@ -92,9 +93,7 @@
     transform: translateY(-2px);
     box-shadow: 0 10px 30px #ff8c4558;
 }
-.intro_image{
-    border-left: 2px solid;
-}
+
 
 .how_container {
     margin-top: 7rem;
@@ -163,4 +162,9 @@
 
 .icon {
     font-size: 1.5rem;
+}
+@media screen and (max-width:800px) {
+    .intro_image{
+        display: none;
+    }
 }

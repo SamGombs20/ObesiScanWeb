@@ -59,8 +59,8 @@ export default function Main() {
               <div className={style.intro_image}>
                 <Image
                 src="/intro_pic.webp"
-                width={300}
-                height={300}
+                width={400}
+                height={400}
                 alt=""
                 />
               </div>
