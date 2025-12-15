@@ -30,6 +30,10 @@
 .intro_text span {
     font-weight: 600;
 }
+.check_components_container{
+    display: flex;
+    justify-content: space-between;
+}
 
 .check_container {
     margin-top: 2rem;

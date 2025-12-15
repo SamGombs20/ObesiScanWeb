@@ -4,59 +4,70 @@ import style from "./styles/home.module.css"
 import { BsPersonCircle } from "react-icons/bs"
 import { PiPersonSimpleBikeFill } from "react-icons/pi"
 import Image from "next/image"
-export default function Main (){
-  const onButtonClick =()=>{
+export default function Main() {
+  const onButtonClick = () => {
     alert("Button clicked")
   }
-  return(
+  return (
     <div className={style.home_container}>
       <div className={style.intro_main_container}>
         <div className={style.intro_container}>
-        <p className={style.intro_text}>Obesi<span>Scan</span> - start your <em><strong>journey</strong></em> to better <em><strong>health</strong></em> today</p>
-        <div className={style.check_container}>
-          <p className={style.check_title}>Quickly check your obesity level</p>
-          <p>We collect anonymous data of your personal, physical, diet and lifestyle information.</p>
-          <div className={style.check_components}>
-            <div className={style.check_component}>
-              <Image
-              src="/personal_details.webp"
-              width={80}
-              height={80}
-              alt=""
-              />
-              <p className={`${style.check_component_title} gradient-text`}>Personal Details</p>
+          <p className={style.intro_text}>Obesi<span>Scan</span> - start your <em><strong>journey</strong></em> to better <em><strong>health</strong></em> today</p>
+          <div className={style.check_container}>
+            <p className={style.check_title}>Quickly check your obesity level</p>
+            <p>We collect anonymous data of your personal, physical, diet and lifestyle information.</p>
+            <div className={style.check_components_container}>
+
+              <div className={style.check_components}>
+                <div className={style.check_component}>
+                  <Image
+                    src="/personal_details.webp"
+                    width={80}
+                    height={80}
+                    alt=""
+                  />
+                  <p className={`${style.check_component_title} gradient-text`}>Personal Details</p>
+                </div>
+                <div className={style.check_component}>
+                  <Image
+                    src="/meal.webp"
+                    width={80}
+                    height={80}
+                    alt=""
+                  />
+                  <p className={`${style.check_component_title} gradient-text`}>Eating Habits</p>
+                </div>
+                <div className={style.check_component}>
+                  <Image
+                    src="/lifestyle_1.webp"
+                    width={80}
+                    height={80}
+                    alt=""
+                  />
+                  <p className={`${style.check_component_title} gradient-text`}>Daily Activity & Lifestyle I</p>
+                </div>
+                <div className={style.check_component}>
+                  <Image
+                    src="/lifestyle_2.webp"
+                    width={80}
+                    height={80}
+                    alt=""
+                  />
+                  <p className={`${style.check_component_title} gradient-text`}>Daily Activity & Lifestyle II</p>
+                </div>
+              </div>
+              <div className={style.intro_image}>
+                <Image
+                src="/intro_pic.webp"
+                width={300}
+                height={300}
+                alt=""
+                />
+              </div>
             </div>
-            <div className={style.check_component}>
-              <Image
-              src="/meal.webp"
-              width={80}
-              height={80}
-              alt=""
-              />
-              <p className={`${style.check_component_title} gradient-text`}>Eating Habits</p>
-            </div>
-            <div className={style.check_component}>
-              <Image
-              src="/lifestyle_1.webp"
-              width={80}
-              height={80}
-              alt=""
-              />
-              <p className={`${style.check_component_title} gradient-text`}>Daily Activity & Lifestyle I</p>
-            </div>
-            <div className={style.check_component}>
-              <Image
-              src="/lifestyle_2.webp"
-              width={80}
-              height={80}
-              alt=""
-              />
-              <p className={`${style.check_component_title} gradient-text`}>Daily Activity & Lifestyle II</p>
-            </div>
+            <button onClick={onButtonClick} className={style.check_btn}>Check now!</button>
           </div>
-          <button onClick={onButtonClick} className={style.check_btn}>Check now!</button>
         </div>
-      </div>
       </div>
       <div className={style.how_container}>
         <div className={style.container}>
@@ -65,7 +76,7 @@ export default function Main (){
           <div className={style.how_components_container}>
             <div className={`${style.how_component} ${style.transparent}`}>
               <div className={style.how_content_title}>
-                <BsPersonCircle className={style.icon}/>
+                <BsPersonCircle className={style.icon} />
                 <p>Personal and Physical Information</p>
               </div>
               <ul>
@@ -76,7 +87,7 @@ export default function Main (){
             </div>
             <div className={style.how_component}>
               <div className={style.how_content_title}>
-                <GiAwareness className={style.icon}/>
+                <GiAwareness className={style.icon} />
                 <p>Hydration & Dietary Awareness</p>
               </div>
               <ul>
@@ -86,7 +97,7 @@ export default function Main (){
             </div>
             <div className={style.how_component}>
               <div className={style.how_content_title}>
-                <GiMeal className={style.icon}/>
+                <GiMeal className={style.icon} />
                 <p>Eating Habits</p>
               </div>
               <ul>
@@ -96,10 +107,10 @@ export default function Main (){
                 <li><span>Snack Intake</span>: Frequent unheathy snacks may lead to weight gain.</li>
               </ul>
             </div>
-            
+
             <div className={`${style.how_component} ${style.transparent}`}>
               <div className={style.how_content_title}>
-                <PiPersonSimpleBikeFill className={style.icon}/>
+                <PiPersonSimpleBikeFill className={style.icon} />
                 <p>Lifestyle & Behavioral Factors</p>
               </div>
               <ul>
