@@ -21,7 +21,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Next JS Tuts",
+  title: "ObesiScan",
   description: "Developed by Joshua",
 };
 
