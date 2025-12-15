@@ -37,21 +37,21 @@ export default function Main (){
             </div>
             <div className={style.check_component}>
               <Image
-              src="/personal_details.webp"
+              src="/lifestyle_1.webp"
               width={80}
               height={80}
               alt=""
               />
-              <p className={`${style.check_component_title} gradient-text`}>Personal Details</p>
+              <p className={`${style.check_component_title} gradient-text`}>Daily Activity & Lifestyle I</p>
             </div>
             <div className={style.check_component}>
               <Image
-              src="/personal_details.webp"
+              src="/lifestyle_2.webp"
               width={80}
               height={80}
               alt=""
               />
-              <p className={`${style.check_component_title} gradient-text`}>Personal Details</p>
+              <p className={`${style.check_component_title} gradient-text`}>Daily Activity & Lifestyle II</p>
             </div>
           </div>
           <button onClick={onButtonClick} className={style.check_btn}>Check now!</button>
