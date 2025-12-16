@@ -140,7 +140,12 @@ export default function Main() {
       <Modal open={open} onClose={handleClose}>
         <Box sx={modalStyle}>
           <PersonalDetailsModal/>
+          <div className={style.form_buttons}>
+            <button className={style.close_btn} onClick={handleClose}>Cancel</button>
+            <button className={style.check_btn} onClick={handleClose}>Save</button>
+          </div>
         </Box>
+
       </Modal>
     </div>
   )

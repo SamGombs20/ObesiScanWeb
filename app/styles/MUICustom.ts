@@ -1,7 +1,7 @@
 export const textfieldStyles={
     marginBottom: '1rem',
   '& .MuiOutlinedInput-root': {
-    color: '#282c34',
+    color: '#8B4513',
     borderRadius: '12px',
     transition: 'border-color 0.3s ease-in-out, background-color 0.3s ease-in-out',
     minWidth: '300px',
@@ -15,20 +15,20 @@ export const textfieldStyles={
       },
     },
     '& .MuiOutlinedInput-notchedOutline': {
-      borderColor: '#ed4662',
+      borderColor: '#006400',
       borderWidth: '2px',
       transition: 'border-color 0.3s ease-in-out',
     },
     '&:hover .MuiOutlinedInput-notchedOutline': {
-      borderColor: '#ed4662',
+      borderColor: '#006400',
     },
     '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-      borderColor: '#ed4662',
+      borderColor: '#006400',
       borderWidth: '2px',
     },
     '& .MuiOutlinedInput-input': {
       // padding: "12px 12px",
-      color: '#282c34',
+      color: '#8B4513',
       fontSize: '14px',
       fontWeight: '500',
       fontFamily: "'Roboto', sans-serif",
@@ -39,7 +39,7 @@ export const textfieldStyles={
       fontWeight: '400',
     },
     '& .MuiInputAdornment-root': {
-      color: '#282c34',
+      color: '#8B4513',
     },
   },
   '.MuiOutlinedInput-root.Mui-focused': {
@@ -52,11 +52,11 @@ export const textfieldStyles={
     backgroundColor: 'transparent',
   },
   '& .MuiInputLabel-outlined': {
-    color: '#282c34',
+    color: '#8B4513',
     fontSize: '14px',
   },
   '& .MuiInputLabel-outlined.Mui-focused': {
-    color: '#ed4662',
+    color: '#006400',
   },
   '& .MuiInputLabel-outlined.Mui-error': {
     color: '#d32f2f',
