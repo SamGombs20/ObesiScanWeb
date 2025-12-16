@@ -13,3 +13,7 @@
     font-weight: 600;
     margin-bottom: 1rem;
 }
+.radio_container{
+    border-bottom: 1px solid var(--custom-brown);
+    margin-bottom: 1rem;
+}

@@ -95,3 +95,79 @@ export const modalStyle = {
   borderRadius: '12px',
   p:4,
 };
+export const radioGroupStyles = {
+  marginBottom: "1rem",
+
+  "& .MuiFormLabel-root": {
+    color: "#8B4513",
+    fontSize: "14px",
+    fontWeight: 600,
+    marginBottom: "0.5rem",
+
+    "&.Mui-focused": {
+      color: "#006400",
+    },
+
+    "&.Mui-error": {
+      color: "#d32f2f",
+    },
+
+    "&.Mui-success": {
+      color: "#388e3c",
+    },
+  },
+
+  "& .MuiRadioGroup-root": {
+    paddingLeft: "0.5rem",
+    gap: "0.25rem",
+  },
+
+  "& .MuiFormControlLabel-root": {
+    marginLeft: 0,
+
+    "& .MuiTypography-root": {
+      fontSize: "14px",
+      fontWeight: 500,
+      color: "#8B4513",
+    },
+
+    "&.Mui-disabled .MuiTypography-root": {
+      color: "#a0a0a0",
+    },
+  },
+
+  "& .MuiRadio-root": {
+    color: "#006400",
+    transition: "color 0.3s ease-in-out",
+
+    "&:hover": {
+      backgroundColor: "transparent",
+    },
+
+    "&.Mui-checked": {
+      color: "#006400",
+    },
+
+    "&.Mui-error": {
+      color: "#d32f2f",
+    },
+
+    "&.Mui-success": {
+      color: "#388e3c",
+    },
+  },
+
+  "& .MuiFormHelperText-root": {
+    fontSize: "0.7rem",
+    marginLeft: "0.75rem",
+    marginTop: "0.25rem",
+
+    "&.Mui-error": {
+      color: "#d32f2f",
+    },
+
+    "&.Mui-success": {
+      color: "#388e3c",
+    },
+  },
+};
