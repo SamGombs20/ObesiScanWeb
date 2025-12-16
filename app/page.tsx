@@ -4,12 +4,21 @@ import style from "./styles/home.module.css"
 import { BsPersonCircle } from "react-icons/bs"
 import { PiPersonSimpleBikeFill } from "react-icons/pi"
 import Image from "next/image"
+import { Box, Modal } from "@mui/material"
+import { modalStyle } from "./styles/MUICustom"
+import { PersonalDetailsModal } from "./components/PersonalDetailsModal"
+import { useState } from "react"
 export default function Main() {
   const onButtonClick = () => {
     alert("Button clicked")
   }
+  const [open, setOpen] = useState(false)
   const onClickCheckComponent=(number:string)=>{
+    setOpen(true)
     console.log(number)
+  }
+  const handleClose =()=>{
+    setOpen(false)
   }
   return (
     <div className={style.home_container}>
@@ -128,6 +137,11 @@ export default function Main() {
           </div>
         </div>
       </div>
+      <Modal open={open} onClose={handleClose}>
+        <Box sx={modalStyle}>
+          <PersonalDetailsModal/>
+        </Box>
+      </Modal>
     </div>
   )
 }
