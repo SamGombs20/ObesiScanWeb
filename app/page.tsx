@@ -8,12 +8,17 @@ import { Box, Modal } from "@mui/material"
 import { modalStyle } from "./styles/MUICustom"
 import { PersonalDetailsModal } from "./components/PersonalDetailsModal"
 import { useState } from "react"
+import { EatingHabits } from "./components/EatingHabitsModal"
+import { DailyActivity1 } from "./components/DailyActivity1Modal"
+import { DailyActivity2 } from "./components/DailyActivity2Modal"
 export default function Main() {
   const onButtonClick = () => {
     alert("Button clicked")
   }
   const [open, setOpen] = useState(false)
+  const [checkNumber, setCheckNumber] = useState(1)
   const onClickCheckComponent=(number:string)=>{
+    setCheckNumber(parseInt(number))
     setOpen(true)
     console.log(number)
   }
@@ -139,7 +144,10 @@ export default function Main() {
       </div>
       <Modal open={open} onClose={handleClose}>
         <Box sx={modalStyle}>
-          <PersonalDetailsModal/>
+          {checkNumber === 1 && <PersonalDetailsModal />}
+          {checkNumber === 2 && <EatingHabits/>}
+          {checkNumber===3 && <DailyActivity1/>}
+          {checkNumber ===4 && <DailyActivity2/>}
           <div className={style.form_buttons}>
             <button className={style.close_btn} onClick={handleClose}>Cancel</button>
             <button className={style.check_btn} onClick={handleClose}>Save</button>
