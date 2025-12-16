@@ -163,6 +163,11 @@
 .icon {
     font-size: 1.5rem;
 }
+.form_buttons{
+    display: flex;
+    justify-content: end;
+    gap: 1.5rem;
+}
 .close_btn{
     color: var(--custom-brown);
     border: 1px solid;
