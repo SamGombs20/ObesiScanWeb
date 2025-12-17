@@ -76,25 +76,25 @@ export const DailyActivity1:FC<Props> = ({data, setData, onSave}) => {
                     </FormControl>
                 </div>
                 <div className={style.radio_container}>
-                    <FormControl sx={radioGroupStyles}>
+                    <FormControl sx={radioGroupStyles} error={!!errors.smoke}>
                         <FormLabel id="smoke">Do you smoke?</FormLabel>
-                        <RadioGroup aria-labelledby="smoke" name="smoke-group">
+                        <RadioGroup aria-labelledby="smoke" value={data.smoke} onChange={handleChange} name="smoke">
                             <FormControlLabel value="yes" control={<Radio />} label="Yes" />
                             <FormControlLabel value="no" control={<Radio />} label="No" />
                         </RadioGroup>
+                        {errors.smoke && <FormHelperText>{errors.smoke}</FormHelperText>}
                     </FormControl>
                 </div>
                 <div className={style.radio_container}>
-                    <FormControl sx={radioGroupStyles}>
+                    <FormControl sx={radioGroupStyles} error={!!errors.alcohol}>
                         <FormLabel id="alcohol">How often do you drink alcohol?</FormLabel>
-                        <RadioGroup aria-labelledby="alcohol" name="alcohol-group">
+                        <RadioGroup aria-labelledby="alcohol" value={data.alcohol} onChange={handleChange} name="alcohol">
                             <FormControlLabel value="1" control={<Radio />} label="I don't" />
                             <FormControlLabel value="2" control={<Radio />} label="Sometimes" />
                             <FormControlLabel value="3" control={<Radio />} label="Frequently" />
                             <FormControlLabel value="4" control={<Radio />} label="Always" />
-
-
                         </RadioGroup>
+                        {errors.alcohol && <FormHelperText>{errors.alcohol}</FormHelperText>}
                     </FormControl>
                 </div>
             </div>
