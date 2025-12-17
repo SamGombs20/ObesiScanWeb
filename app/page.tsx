@@ -12,10 +12,7 @@ import { EatingHabits } from "./components/EatingHabitsModal"
 import { DailyActivity1 } from "./components/DailyActivity1Modal"
 import { DailyActivity2 } from "./components/DailyActivity2Modal"
 export default function Main() {
-  const onButtonClick = () => {
-    setCheckNumber(1)
-    setOpen(true)
-  }
+
   const [open, setOpen] = useState(false)
   const [checkNumber, setCheckNumber] = useState(1)
   const [personalDetails, setPersonalDetails] = useState<PersonalDetails>({
@@ -44,6 +41,7 @@ export default function Main() {
   })
   const [globalError, setGlobalError] = useState('')
   const onClickCheckComponent=(number:string)=>{
+    setGlobalError('')
     setCheckNumber(parseInt(number))
     setOpen(true)
   }
@@ -122,7 +120,8 @@ export default function Main() {
                 />
               </div>
             </div>
-            <button onClick={onButtonClick} className={style.check_btn}>Get Prediction</button>
+            {globalError && <p className="error-text">{globalError}</p>}
+            <button onClick={handlePredict} className={style.check_btn}>Get Prediction</button>
           </div>
         </div>
       </div>
