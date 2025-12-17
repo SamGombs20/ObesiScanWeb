@@ -18,26 +18,26 @@ export default function Main() {
   }
   const [open, setOpen] = useState(false)
   const [checkNumber, setCheckNumber] = useState(1)
-  const [personalDetails, setPersonalDetails] = useState({
+  const [personalDetails, setPersonalDetails] = useState<PersonalDetails>({
     gender:"",
     familyHistory:"",
     age:"",
     height:"",
     weight:""
   })
-  const [eatingHabits, setEatingHabits] = useState({
+  const [eatingHabits, setEatingHabits] = useState<EatingHabits>({
     caloriesIntake:"",
     dailyMeals:"",
     vegetableIntake:"",
     snackIntake:""
   })
-  const [dailyActivity1, setDailyActivity1] = useState({
+  const [dailyActivity1, setDailyActivity1] = useState<DailyActivity1>({
     waterIntake:"",
     calorieMonitoring:"",
     smoke:"",
     alcohol:""
   })
-  const [dailyActivity2, setDailyActivity2] = useState({
+  const [dailyActivity2, setDailyActivity2] = useState<DailyActivity2>({
     physicalActivity:"",
     technologyUse:"",
     transportMeans:""
@@ -61,7 +61,7 @@ export default function Main() {
       return;
     }
     setGlobalError('')
-    const data = {...personalDetails, ...eatingHabits, ...dailyActivity1, ...dailyActivity2}
+    const data:Obesity = {...personalDetails, ...eatingHabits, ...dailyActivity1, ...dailyActivity2}
     console.log(data)
   }
   return (
@@ -122,7 +122,7 @@ export default function Main() {
                 />
               </div>
             </div>
-            <button onClick={onButtonClick} className={style.check_btn}>Check now!</button>
+            <button onClick={onButtonClick} className={style.check_btn}>Get Prediction</button>
           </div>
         </div>
       </div>
