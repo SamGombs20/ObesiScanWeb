@@ -149,10 +149,7 @@ export default function Main() {
           {checkNumber === 2 && <EatingHabits/>}
           {checkNumber===3 && <DailyActivity1/>}
           {checkNumber ===4 && <DailyActivity2/>}
-          <div className={style.form_buttons}>
-            <button className={style.close_btn} onClick={handleClose}>Cancel</button>
-            <button className={style.check_btn} onClick={handleClose}>Save</button>
-          </div>
+          
         </Box>
 
       </Modal>

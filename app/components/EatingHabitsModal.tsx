@@ -1,6 +1,6 @@
 'use client'
 
-import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup  } from "@mui/material";
+import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup } from "@mui/material";
 import { radioGroupStyles } from "../styles/MUICustom";
 import style from "../styles/detail_modal.module.css"
 export const EatingHabits = () => {
@@ -37,7 +37,7 @@ export const EatingHabits = () => {
                             <FormControlLabel value="1" control={<Radio />} label="Rarely" />
                             <FormControlLabel value="2" control={<Radio />} label="Sometimes" />
                             <FormControlLabel value="3" control={<Radio />} label="Always" />
-                            
+
                         </RadioGroup>
                     </FormControl>
                 </div>
@@ -49,12 +49,16 @@ export const EatingHabits = () => {
                             <FormControlLabel value="2" control={<Radio />} label="Sometimes" />
                             <FormControlLabel value="3" control={<Radio />} label="Frequently" />
                             <FormControlLabel value="4" control={<Radio />} label="Always" />
-                            
+
                         </RadioGroup>
                     </FormControl>
                 </div>
-               
-               
+
+
+            </div>
+            <div className={style.form_buttons}>
+                <button className={`${style.close_btn} btn`}>Cancel</button>
+                <button className={`${style.check_btn} btn`}>Save</button>
             </div>
         </div>
     );

@@ -1,12 +1,14 @@
 @import "tailwindcss";
 
-*,*::before,*::after{
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 :root {
   --background: #ffffff;
-  --title-font:var(--font-poppins);
+  --title-font: var(--font-poppins);
   --foreground: #171717;
   --custom-dark-green: #006400;
   --custom-dark-green-a: #FF006400;
@@ -41,12 +43,31 @@ body {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
 }
-.title-text{
+
+.title-text {
   font-family: var(--font-poppins);
 }
+
 .gradient-text {
   background: linear-gradient(200deg, var(--custom-brown), var(--custom-dark-green));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.btn {
+  margin-top: 3rem;
+  padding: 8px 20px;
+  border-radius: 1.5rem;
+  color: white;
+  font-weight: 600;
+  border: none;
+  background: linear-gradient(135deg, var(--custom-brown), var(--custom-dark-green));
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn:hover{
+  transform: translateY(-2px);
+    box-shadow: 0 10px 30px #ff8c4558;
 }

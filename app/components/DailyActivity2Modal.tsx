@@ -48,6 +48,10 @@ export const DailyActivity2 = () => {
                     </FormControl>
                 </div>
             </div>
+            <div className={style.form_buttons}>
+                <button className={`${style.close_btn} btn`}>Cancel</button>
+                <button className={`${style.check_btn} btn`}>Save</button>
+            </div>
         </div>
     );
 }

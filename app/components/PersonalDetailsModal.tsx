@@ -1,6 +1,6 @@
 'use client'
 
-import { FormControl, FormControlLabel, FormLabel,  Radio, RadioGroup, TextField } from "@mui/material";
+import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, TextField } from "@mui/material";
 import { radioGroupStyles, textfieldStyles } from "../styles/MUICustom";
 import style from "../styles/detail_modal.module.css"
 export const PersonalDetailsModal = () => {
@@ -31,6 +31,10 @@ export const PersonalDetailsModal = () => {
                 <TextField label="Age" sx={textfieldStyles} />
                 <TextField label="Height (m)" sx={textfieldStyles} />
                 <TextField label="Weight (kg)" sx={textfieldStyles} />
+            </div>
+            <div className={style.form_buttons}>
+                <button className={`${style.close_btn} btn`}>Cancel</button>
+                <button className={`${style.check_btn} btn`}>Save</button>
             </div>
         </div>
     );
