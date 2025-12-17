@@ -3,7 +3,14 @@
 import { FormControl, FormControlLabel, FormLabel, InputLabel, MenuItem, Radio, RadioGroup, Select, TextField } from "@mui/material";
 import { radioGroupStyles, textfieldStyles } from "../styles/MUICustom";
 import style from "../styles/detail_modal.module.css"
-export const DailyActivity2 = () => {
+import { FC } from "react";
+
+interface Props{
+    data:DailyActivity2
+    setData:(data:DailyActivity2)=>void
+    onSave:()=>void
+}
+export const DailyActivity2:FC<Props> = ({data, setData, onSave}) => {
     return (
         <div className={style.details_form_container}>
             <p className={`${style.form_title} gradient-text`}>
