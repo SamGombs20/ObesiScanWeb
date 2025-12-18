@@ -12,6 +12,7 @@ import { EatingHabits } from "./components/EatingHabitsModal"
 import { DailyActivity1 } from "./components/DailyActivity1Modal"
 import { DailyActivity2 } from "./components/DailyActivity2Modal"
 import { predict } from "./api/api"
+import { formatObesityLevel } from "./utils/common"
 export default function Main() {
 
   const [open, setOpen] = useState(false)
@@ -80,7 +81,7 @@ export default function Main() {
       MTRANS: data.transportMeans
     }
     const res =await predict(apiInput)
-    console.log(res.prediction.toUpperCase())
+    console.log(formatObesityLevel(res.prediction))
   }
   return (
     <div className={style.home_container}>
