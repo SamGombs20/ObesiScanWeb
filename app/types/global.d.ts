@@ -41,3 +41,21 @@ type Obesity ={
     transportMeans: string;
     
 }
+type APIInput ={
+    Gender:string
+    Age:number
+    Height:number
+    Weight:number
+    family_history_with_overweight:string
+    FAVC:string
+    FCVC:number
+    NCP:number
+    CAEC:string
+    SMOKE:string
+    CH20:number
+    SCC:string
+    FAF:number
+    TUE:number
+    CALC:number
+    MTANS:string
+}

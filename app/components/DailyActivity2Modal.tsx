@@ -53,10 +53,10 @@ export const DailyActivity2:FC<Props> = ({data, setData, onSave}) => {
                     <FormControl sx={radioGroupStyles} error={!!errors.physicalActivity}>
                         <FormLabel id="physical">How often do you have physical activity?</FormLabel>
                         <RadioGroup aria-labelledby="physical" value={data.physicalActivity} onChange={handleChange} name="physicalActivity">
-                            <FormControlLabel value="1" control={<Radio />} label="I don't" />
-                            <FormControlLabel value="2" control={<Radio />} label="Sometimes" />
-                            <FormControlLabel value="3" control={<Radio />} label="Frequently" />
-                            <FormControlLabel value="4" control={<Radio />} label="Always" />
+                            <FormControlLabel value="0" control={<Radio />} label="I don't" />
+                            <FormControlLabel value="1" control={<Radio />} label="Sometimes" />
+                            <FormControlLabel value="2" control={<Radio />} label="Frequently" />
+                            <FormControlLabel value="3" control={<Radio />} label="Always" />
                         </RadioGroup>
                         {errors.physicalActivity && <FormHelperText>{errors.physicalActivity}</FormHelperText>}
                     </FormControl>
@@ -65,9 +65,9 @@ export const DailyActivity2:FC<Props> = ({data, setData, onSave}) => {
                     <FormControl sx={radioGroupStyles} error={!!errors.technologyUse}>
                         <FormLabel id="tech">How much time do you use technological devices such as cell phone, video games, television, computer and others?</FormLabel>
                         <RadioGroup aria-labelledby="tech" value={data.technologyUse} onChange={handleChange} name="technologyUse">
-                            <FormControlLabel value="1" control={<Radio />} label="less than 3 hours" />
-                            <FormControlLabel value="2" control={<Radio />} label="3-8 hours" />
-                            <FormControlLabel value="3" control={<Radio />} label="more than 8 hours" />
+                            <FormControlLabel value="0" control={<Radio />} label="less than 3 hours" />
+                            <FormControlLabel value="1" control={<Radio />} label="3-8 hours" />
+                            <FormControlLabel value="2" control={<Radio />} label="more than 8 hours" />
                         </RadioGroup>
                         {errors.technologyUse && <FormHelperText>{errors.technologyUse}</FormHelperText>}
                     </FormControl>
@@ -76,11 +76,11 @@ export const DailyActivity2:FC<Props> = ({data, setData, onSave}) => {
                     <FormControl sx={radioGroupStyles} error={!!errors.transportMeans}>
                         <FormLabel id="transport">Which transportation do you usually use?</FormLabel>
                         <RadioGroup aria-labelledby="transport" value={data.transportMeans} onChange={handleChange} name="transportMeans">
-                            <FormControlLabel value="1" control={<Radio />} label="Bike" />
-                            <FormControlLabel value="2" control={<Radio />} label="Walking" />
-                            <FormControlLabel value="3" control={<Radio />} label="Motorbike" />
-                            <FormControlLabel value="4" control={<Radio />} label="Automobile" />
-                            <FormControlLabel value="5" control={<Radio />} label="Public Transportation" />
+                            <FormControlLabel value="Bike" control={<Radio />} label="Bike" />
+                            <FormControlLabel value="Walking" control={<Radio />} label="Walking" />
+                            <FormControlLabel value="Motorbike" control={<Radio />} label="Motorbike" />
+                            <FormControlLabel value="Automobile" control={<Radio />} label="Automobile" />
+                            <FormControlLabel value="Public_Transportation" control={<Radio />} label="Public Transportation" />
 
 
                         </RadioGroup>

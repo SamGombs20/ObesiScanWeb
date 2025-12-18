@@ -87,10 +87,10 @@ export const EatingHabits:FC<Props> = ({data, setData, onSave}) => {
                     <FormControl sx={radioGroupStyles} error={!!errors.snackIntake}>
                         <FormLabel id="snack">Do you eat any food/snack between meals?</FormLabel>
                         <RadioGroup aria-labelledby="snack" value={data.snackIntake} onChange={handleChange} name="snackIntake">
-                            <FormControlLabel value="1" control={<Radio />} label="No" />
-                            <FormControlLabel value="2" control={<Radio />} label="Sometimes" />
-                            <FormControlLabel value="3" control={<Radio />} label="Frequently" />
-                            <FormControlLabel value="4" control={<Radio />} label="Always" />
+                            <FormControlLabel value="no" control={<Radio />} label="No" />
+                            <FormControlLabel value="Sometimes" control={<Radio />} label="Sometimes" />
+                            <FormControlLabel value="Frequently" control={<Radio />} label="Frequently" />
+                            <FormControlLabel value="Always" control={<Radio />} label="Always" />
 
                         </RadioGroup>
                         {errors.snackIntake && <FormHelperText>{errors.snackIntake}</FormHelperText>}
