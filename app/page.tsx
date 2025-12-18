@@ -13,56 +13,59 @@ import { DailyActivity1 } from "./components/DailyActivity1Modal"
 import { DailyActivity2 } from "./components/DailyActivity2Modal"
 import { predict, recommendation } from "./api/api"
 import { formatObesityLevel } from "./utils/common"
+import { ResponseModal } from "./components/ModelResponseModal"
 export default function Main() {
 
   const [open, setOpen] = useState(false)
   const [checkNumber, setCheckNumber] = useState(1)
+  const [predictionInfo, setPredictionInfo] = useState("")
+  const [recommendationInfo, setRecommendationInfo] = useState("")
   const [personalDetails, setPersonalDetails] = useState<PersonalDetails>({
-    gender:"",
-    familyHistory:"",
-    age:"",
-    height:"",
-    weight:""
+    gender: "",
+    familyHistory: "",
+    age: "",
+    height: "",
+    weight: ""
   })
   const [eatingHabits, setEatingHabits] = useState<EatingHabits>({
-    caloriesIntake:"",
-    dailyMeals:"",
-    vegetableIntake:"",
-    snackIntake:""
+    caloriesIntake: "",
+    dailyMeals: "",
+    vegetableIntake: "",
+    snackIntake: ""
   })
   const [dailyActivity1, setDailyActivity1] = useState<DailyActivity1>({
-    waterIntake:"",
-    calorieMonitoring:"",
-    smoke:"",
-    alcohol:""
+    waterIntake: "",
+    calorieMonitoring: "",
+    smoke: "",
+    alcohol: ""
   })
   const [dailyActivity2, setDailyActivity2] = useState<DailyActivity2>({
-    physicalActivity:"",
-    technologyUse:"",
-    transportMeans:""
+    physicalActivity: "",
+    technologyUse: "",
+    transportMeans: ""
   })
   const [globalError, setGlobalError] = useState('')
-  const onClickCheckComponent=(number:string)=>{
+  const onClickCheckComponent = (number: string) => {
     setGlobalError('')
     setCheckNumber(parseInt(number))
     setOpen(true)
   }
-  const handleClose =()=>{
+  const handleClose = () => {
     setOpen(false)
   }
-  const handlePredict = async()=>{
-    const isPersonalComplete = Object.values(personalDetails).every(value=> value!=='')
-    const isEatingComplete = Object.values(eatingHabits).every(value=>value!=='')
-    const isActivity1Complete = Object.values(dailyActivity1).every(value=>value!=='')
-    const isActivity2Complete = Object.values(dailyActivity2).every(value=> value!=='')
+  const handlePredict = async () => {
+    const isPersonalComplete = Object.values(personalDetails).every(value => value !== '')
+    const isEatingComplete = Object.values(eatingHabits).every(value => value !== '')
+    const isActivity1Complete = Object.values(dailyActivity1).every(value => value !== '')
+    const isActivity2Complete = Object.values(dailyActivity2).every(value => value !== '')
 
-    if(!isPersonalComplete || !isEatingComplete || !isActivity1Complete || !isActivity2Complete){
+    if (!isPersonalComplete || !isEatingComplete || !isActivity1Complete || !isActivity2Complete) {
       setGlobalError("Please complete all the sections.")
       return;
     }
     setGlobalError('')
-    const data:Obesity = {...personalDetails, ...eatingHabits, ...dailyActivity1, ...dailyActivity2}
-    const apiInput:APIInput ={
+    const data: Obesity = { ...personalDetails, ...eatingHabits, ...dailyActivity1, ...dailyActivity2 }
+    const apiInput: APIInput = {
       Gender: data.gender,
       Age: parseInt(data.age),
       Height: parseInt(data.height),
@@ -80,10 +83,15 @@ export default function Main() {
       CALC: data.alcohol,
       MTRANS: data.transportMeans
     }
-    const pred =await predict(apiInput)
-    const recommend = await recommendation(apiInput)
-    console.log(formatObesityLevel(pred.prediction))
-    console.log(recommend.recommendation)
+    try {
+      const pred = await predict(apiInput)
+      const recommend = await recommendation(apiInput)
+      setPredictionInfo(pred.prediction)
+      setRecommendationInfo(recommend.recommendation)
+    }
+    catch (e) {
+      throw new Error("Couldn't process data")
+    }
   }
   return (
     <div className={style.home_container}>
@@ -96,7 +104,7 @@ export default function Main() {
             <div className={style.check_components_container}>
 
               <div className={style.check_components}>
-                <div className={style.check_component} onClick={()=>onClickCheckComponent("1")}>
+                <div className={style.check_component} onClick={() => onClickCheckComponent("1")}>
                   <Image
                     src="/personal_details.webp"
                     width={80}
@@ -105,7 +113,7 @@ export default function Main() {
                   />
                   <p className={`${style.check_component_title} gradient-text`}>Personal Details</p>
                 </div>
-                <div className={style.check_component} onClick={()=>onClickCheckComponent("2")}>
+                <div className={style.check_component} onClick={() => onClickCheckComponent("2")}>
                   <Image
                     src="/meal.webp"
                     width={80}
@@ -114,7 +122,7 @@ export default function Main() {
                   />
                   <p className={`${style.check_component_title} gradient-text`}>Eating Habits</p>
                 </div>
-                <div className={style.check_component} onClick={()=>onClickCheckComponent("3")}>
+                <div className={style.check_component} onClick={() => onClickCheckComponent("3")}>
                   <Image
                     src="/lifestyle_1.webp"
                     width={80}
@@ -123,7 +131,7 @@ export default function Main() {
                   />
                   <p className={`${style.check_component_title} gradient-text`}>Daily Activity & Lifestyle I</p>
                 </div>
-                <div className={style.check_component} onClick={()=>onClickCheckComponent("4")}>
+                <div className={style.check_component} onClick={() => onClickCheckComponent("4")}>
                   <Image
                     src="/lifestyle_2.webp"
                     width={80}
@@ -135,11 +143,11 @@ export default function Main() {
               </div>
               <div className={style.intro_image}>
                 <Image
-                src="/intro_pic.webp"
-                width={400}
-                height={400}
-                loading="eager"
-                alt=""
+                  src="/intro_pic.webp"
+                  width={400}
+                  height={400}
+                  loading="eager"
+                  alt=""
                 />
               </div>
             </div>
@@ -205,11 +213,12 @@ export default function Main() {
       </div>
       <Modal open={open} onClose={handleClose}>
         <Box sx={modalStyle}>
-          {checkNumber === 1 && <PersonalDetailsModal data={personalDetails} setData={setPersonalDetails} onSave={handleClose}/>}
-          {checkNumber === 2 && <EatingHabits data={eatingHabits} onSave={handleClose} setData={setEatingHabits}/>}
-          {checkNumber===3 && <DailyActivity1 data={dailyActivity1} setData={setDailyActivity1} onSave={handleClose}/>}
-          {checkNumber ===4 && <DailyActivity2 data={dailyActivity2} setData={setDailyActivity2} onSave={handleClose}/>}
-          
+          {checkNumber ===1 && <ResponseModal/>}
+          {/* {checkNumber === 1 && <PersonalDetailsModal data={personalDetails} setData={setPersonalDetails} onSave={handleClose} />} */}
+          {checkNumber === 2 && <EatingHabits data={eatingHabits} onSave={handleClose} setData={setEatingHabits} />}
+          {checkNumber === 3 && <DailyActivity1 data={dailyActivity1} setData={setDailyActivity1} onSave={handleClose} />}
+          {checkNumber === 4 && <DailyActivity2 data={dailyActivity2} setData={setDailyActivity2} onSave={handleClose} />}
+
         </Box>
 
       </Modal>

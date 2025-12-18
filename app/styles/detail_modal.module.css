@@ -8,13 +8,47 @@
     display: flex;
     flex-direction: column;
 }
-.form_title{
+.title_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.response_container{
+    color: var(--custom-brown);
+    max-width: 500px;
+}
+
+.form_title, .title_text{
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1rem;
     text-align: center;
     padding-bottom: 1rem;
     border-bottom: 5px solid var(--custom-brown);
+}
+.content_container{
+    margin-bottom: 1rem;
+}
+.content_title{
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid;
+    
+}
+.content{
+    padding: 0.5rem;
+}
+.title_text{
+    border-bottom: none;
+    margin-top: 2rem;
+}
+.title_icon{
+    width: auto;
+    height: auto;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-color: var(--custom-dark-green);
 }
 .radio_container{
     border-bottom: 1px solid var(--custom-brown);
