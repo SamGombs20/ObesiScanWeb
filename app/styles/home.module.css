@@ -33,7 +33,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 0.5rem;
     gap: 3rem;
 }
 
@@ -64,7 +64,6 @@
     transition: all 0.3s ease;
 }
 .check_components{
-    margin-top: 2rem;
     display: flex;
     max-width: 400px;
     flex-wrap: wrap;

@@ -185,8 +185,8 @@ export default function Main() {
               <div className={style.intro_image}>
                 <Image
                   src="/intro_pic.webp"
-                  width={300}
-                  height={400}
+                  width={350}
+                  height={350}
                   loading="eager"
                   alt=""
                 />
