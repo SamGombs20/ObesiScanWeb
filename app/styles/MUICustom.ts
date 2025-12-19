@@ -172,48 +172,41 @@ export const radioGroupStyles = {
     },
 };
 export const stepperStyle = {
+    marginTop: '1rem',
     "& .MuiStep-root": {
         color: "#8B4513",
         fontSize: "1.3rem",
-        "& .Mui-active": {
-            color: "#006400",
-            fontWeight: 600
+
+        "& .MuiStepLabel-label": {
+            color: "#8B4513",
         },
-        "& .Mui-disabled":{
-            color:"#8B4513"
-        }
+        "& .MuiStepLabel-label.Mui-active": {
+            fontWeight: 600,
+            color: "#006400"
+        },
+        "& .MuiStepLabel-iconContainer": {
+            backgroundColor: "#8B4513",
+            padding: "0.3rem",
+            borderRadius: "50%",
+            marginRight: '0.3rem',
+            color: "#fff"
+        },
+        "& .MuiStepLabel-iconContainer.Mui-active": {
+            backgroundColor: "#006400",
+            color: "#fff"
+        },
+        "& .MuiStepLabel-label.Mui-completed": {
+            color: '#006400'
+        },
+        "& .MuiStepLabel-iconContainer.Mui-completed": {
+            backgroundColor: "#006400",
+
+        },
+        "& .MuiStepConnector-line": {
+            borderColor: '#8B4513',
+        },
     },
 
-    // "& .Mui-completed":{
-    //     color:"#006400"
-    // }
-    // "& .MuiStepIcon-text": {
-    //   fill: "#fff",
-    //   fontSize: "1rem",
-    //   fontWeight: 600,
-    // },
 
-    // "& .Mui-active .MuiStepIcon-root": {
-    //   color: "#006400",
-    // },
-    // "& .Mui-active .MuiStepIcon-text": {
-    //   fill: "#fff",
-    // },
-    // "& .Mui-completed .MuiStepIcon-root": {
-    //   color: "#388e3c",
-    // },
-
-    // "& .MuiStepLabel-label": {
-    //   color: "#8B4513",
-    //   fontSize: "14px",
-    // //   fontWeight: 600,
-    // },
-    // "& .Mui-active .MuiStepLabel-label": {
-    //   color: "#006400",
-    //   fontWeight: 700,
-    // },
-    // "& .Mui-completed .MuiStepLabel-label": {
-    //   color: "#388e3c",
-    // },
 }
 

@@ -73,9 +73,8 @@ export default function Main() {
   }
   const handleSave = () => {
     setOpen(false)
-    if (checkNumber < 4) {
-      let value = checkNumber
-      setCheckNumber(value += 1)
+    if (checkNumber < steps.length -1) {
+      setCheckNumber(prev => prev +1)
     }
   }
   const handleClose =()=>{
@@ -137,7 +136,7 @@ export default function Main() {
             <Box sx={{width:"90%",...stepperStyle}}>
               <Stepper nonLinear activeStep={checkNumber}>
                 {steps.map((step,index)=>(
-                  <Step key={index}>
+                  <Step completed={checkNumber>index} key={index}>
                     <StepLabel icon={<step.icon/>}>{step.label}</StepLabel>
                   </Step>
                 ))}
