@@ -2,6 +2,7 @@
 import style from "../styles/blog.module.css"
 
 export const BlogComponent =()=>{
+
     return (
         <div className={style.blog}>
             <div className={style.blog_image}>

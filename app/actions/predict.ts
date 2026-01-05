@@ -1,4 +1,4 @@
-import { predict, recommendation } from "../api/api";
+import { predict, recommendation } from "../api/predictionAPI";
 
 export const predictAction = async(input:APIInput)=>{
     return await predict(input)

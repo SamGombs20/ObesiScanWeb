@@ -65,3 +65,35 @@ type PredictionRespone ={
 type RecommendationResponse ={
     recommendation:string
 }
+
+type PortableTextSpan ={
+    _key:string
+    _type:span
+    text:string
+    marks:string[]
+}
+type PortableTextBlock ={
+    _key:string
+    _type:"block"
+    style:"normal" | "h1" | "h2" | "h3" | "blockquote"
+    children:PortableTextSpan[]
+    markDefs:[]
+}
+
+type SanityImage = {
+    asset:{url:string}
+}
+type Author ={
+    _id:string
+    name:string
+    bio?:string
+}
+type BlogPost ={
+    _id:string
+    title:string
+    slug:string
+    body:PortableTextBlock[]
+    mainImage:SanityImage
+    author?:Author
+    publishedAt:string
+}

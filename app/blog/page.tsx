@@ -2,7 +2,10 @@ import { Divider } from "@mui/material";
 import style from "../styles/blog.module.css"
 import { dividerStyles } from "../styles/MUICustom";
 import { BlogComponent } from "../components/BlogComponent";
-const Blog = () => {
+import { getBlogPosts } from "../actions/blog";
+const Blog = async () => {
+    const blogs = await getBlogPosts()
+    console.log(blogs)
     return (
         <div className={style.blog_container}>
             <div className={style.intro_container}>
