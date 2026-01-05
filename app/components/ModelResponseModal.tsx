@@ -20,6 +20,7 @@ export const ResponseModal:FC<Props> = ({prediction, recommendation, close}) => 
                     width={20}
                     height={20}
                     className={style.title_icon}
+                    style={{backgroundColor:"#006400"}}
                 />
                 <p className={`${style.title_text} gradient-text`}>Prediction Results</p>
             </div>

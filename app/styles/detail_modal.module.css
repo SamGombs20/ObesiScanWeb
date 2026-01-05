@@ -56,7 +56,7 @@
     height: auto;
     padding: 0.5rem;
     border-radius: 50%;
-    background-color: var(--custom-dark-green);
+    /* background-color: var(--custom-dark-green); */
 }
 .radio_container{
     border-bottom: 1px solid var(--custom-brown);
