@@ -121,3 +121,8 @@
     margin-bottom: 1rem;
     border-bottom: 2px solid var(--custom-brown);
 }
+.article_footer{
+    font-style: italic;
+    margin-top: 3rem;
+    color: var(--custom-brown);
+}

@@ -1,6 +1,7 @@
 import { formatDate } from "@/app/utils/common"
 import style from "../../styles/blog.module.css"
 import { getBlogBySlug, getBlogSlugs } from "@/app/actions/blog"
+import { PortableText } from "@portabletext/react"
 
 export const generateStaticParams = async () => {
     const slugs = await getBlogSlugs()
@@ -26,13 +27,14 @@ const BlogDetailPage = async ({ params, }: { params: { slug: string } }) => {
             <section className={style.article_content}>
                 {blog.body?.map((block)=>block._type === 'block'?(
                     <div key={block._key}>
-                        <p >{block.children?.map((child)=>child.text)}</p>
+                        {/* <p >{block.children?.map((child)=>child.text)}</p> */}
+                        <PortableText value={block} />
                         <br />
                     </div>
                     
                 ):null)}
             </section>
-            <footer>
+            <footer className={style.article_footer}>
                 <p>{blog.author?.bio}</p>
             </footer>
         </article>

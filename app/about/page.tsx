@@ -1,6 +1,9 @@
+import style from "../styles/about.module.css"
 const About =()=>{
     return(
-        <h1>About Page</h1>
+        <div className={style.about_container}>
+
+        </div>
     )
 }
 export default About;
