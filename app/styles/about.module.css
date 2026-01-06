@@ -1,7 +1,7 @@
 .about_container{
     min-height: 100vh;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 5rem auto 2rem auto;
     padding: 2rem;
 }
 .title{
@@ -18,4 +18,15 @@
 }
 .content_text span{
     color: var(--custom-brown);
+}
+.components_container{
+    margin-top: 3rem;
+}
+.component{
+    max-width: 350px;
+}
+.component_title{
+    font-family: var(--font-poppins);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
 }
