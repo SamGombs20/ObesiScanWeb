@@ -1,7 +1,7 @@
 .about_container{
     min-height: 100vh;
     max-width: 800px;
-    margin: 5rem auto 2rem auto;
+    margin: 8rem auto 2rem auto;
     padding: 2rem;
 }
 .title{
@@ -20,14 +20,19 @@
     color: var(--custom-brown);
 }
 .components_main_container{
-    margin-top: 3rem;
+    margin-top: 5rem;
+}
+.section_title{
+    display: flex;
+    justify-content: center;
 }
 .components_title{
     font-size: 1.8rem;
     font-family: var(--font-poppins);
     width: fit-content;
     font-weight: 600;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
+    padding: 1rem 2rem;
     border-bottom: 3px solid var(--custom-dark-green);
     text-align: right;
 }
@@ -42,6 +47,7 @@
     max-width: 350px;
     min-width: 300px;
     border-radius: 1rem;
+    box-shadow: var(--box-shadow);
 }
 .component_content{
     padding: 0.5rem;

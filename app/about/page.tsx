@@ -10,7 +10,9 @@ const About = () => {
                     <p className={style.content_text}><strong><span>Obesi</span>Scan</strong> is a platform focused on predicting obesity levels while also featuring comprehensive obesity blogs. We are committed to delivering precise, current insights into obesity, including its causes, associated health risks, and effective prevention methods. Our goal is to increase public understanding of obesity's multifaceted nature and encourage healthier living through educational articles and valuable resources. We firmly believe that informed education on obesity empowers people to take control of their health and make better lifestyle choices.</p>
                 </div>
                 <div className={style.components_main_container}>
-                    <p className={`${style.components_title} gradient-text`}>What it Contains</p>
+                    <div className={style.section_title}>
+                        <p className={`${style.components_title}`}>What it Contains</p>
+                    </div>
                     <div className={style.components_container}>
                         <div className={style.component} style={{backgroundColor:'#8B4513'}}>
                             <div className={style.component_img} style={{ backgroundImage: 'url(/ml.webp)' }}></div>
