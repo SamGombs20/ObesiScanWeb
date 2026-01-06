@@ -23,6 +23,18 @@ const BlogDetailPage = async ({ params, }: { params: { slug: string } }) => {
             <div className={style.image_container}>
                 <div className={`${style.article_image}`} style={{ backgroundImage: `url(${blog.mainImage?.asset.url})` }}></div>
             </div>
+            <section className={style.article_content}>
+                {blog.body?.map((block)=>block._type === 'block'?(
+                    <div key={block._key}>
+                        <p >{block.children?.map((child)=>child.text)}</p>
+                        <br />
+                    </div>
+                    
+                ):null)}
+            </section>
+            <footer>
+                <p>{blog.author?.bio}</p>
+            </footer>
         </article>
     )
 }
