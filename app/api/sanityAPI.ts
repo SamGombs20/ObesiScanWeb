@@ -1,5 +1,6 @@
 
 const baseUrl = process.env.SANITY_URL
+
 export const getSanityData = async () => {
     const query = "*[_type=='blogPost']{" +
         "_id," +
