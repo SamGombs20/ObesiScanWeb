@@ -7,7 +7,7 @@
     background: linear-gradient(135deg, var(--custom-dark-green), var(--custom-brown));
     /* padding-top: 10rem; */
     padding-bottom: 5rem;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,13 +18,13 @@
     margin-left: auto;
     margin-right: auto;
 
-    padding: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .intro_text {
     font-size: 2.5rem;
     color: white;
-
 }
 
 .intro_text span {
