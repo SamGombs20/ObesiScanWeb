@@ -123,6 +123,8 @@ export default function Main() {
                             width={80}
                             height={80}
                             alt=""
+                            loading="eager"
+                            className={style.check_component_image}
                         />
                         <p className={`${style.check_component_title} gradient-text`}>Personal Details</p>
                     </div>
@@ -132,6 +134,8 @@ export default function Main() {
                             width={80}
                             height={80}
                             alt=""
+                            loading="eager"
+                            className={style.check_component_image}
                         />
                         <p className={`${style.check_component_title} gradient-text`}>Eating Habits</p>
                     </div>
@@ -140,7 +144,9 @@ export default function Main() {
                             src="/lifestyle_1.webp"
                             width={80}
                             height={80}
+                            loading="eager"
                             alt=""
+                            className={style.check_component_image}
                         />
                         <p className={`${style.check_component_title} gradient-text`}>Daily Activity & Lifestyle I</p>
                     </div>
@@ -149,7 +155,9 @@ export default function Main() {
                             src="/lifestyle_2.webp"
                             width={80}
                             height={80}
+                            loading="eager"
                             alt=""
+                            className={style.check_component_image}
                         />
                         <p className={`${style.check_component_title} gradient-text`}>Daily Activity & Lifestyle II</p>
                     </div>

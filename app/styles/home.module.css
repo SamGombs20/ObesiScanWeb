@@ -96,6 +96,10 @@
     cursor: pointer;
 
 }
+.check_component_image{
+    background-color: white;
+    border-radius: 1rem;
+}
 
 .check_component_title {
     font-size: 1rem;
