@@ -1,4 +1,4 @@
-const apiUrl = "https://obesityml.onrender.com"
+const apiUrl = "https://obesityml-vjyy.onrender.com"
 
 
 export const predict = async(input:APIInput):Promise<PredictionRespone>=>{
