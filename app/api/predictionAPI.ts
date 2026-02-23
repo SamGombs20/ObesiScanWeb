@@ -1,4 +1,4 @@
-const apiUrl = "https://obesityml-vjyy.onrender.com"
+const apiUrl = "https://obesiscan-vercel.vercel.app"
 
 
 export const predict = async(input:APIInput):Promise<PredictionRespone>=>{
