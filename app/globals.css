@@ -69,6 +69,12 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
 }
+.loading-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 .main-container{
   max-width: 1120px;
   margin: 0 auto;

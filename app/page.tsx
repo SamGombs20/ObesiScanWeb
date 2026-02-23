@@ -14,10 +14,12 @@ import { PersonalDetailsModal } from "./components/PersonalDetailsModal"
 import { EatingHabits } from "./components/EatingHabitsModal"
 import { DailyActivity1 } from "./components/DailyActivity1Modal"
 import { DailyActivity2 } from "./components/DailyActivity2Modal"
+import { Loading } from "./components/Loading"
 
 export default function Main() {
 
   const [open, setOpen] = useState(false)
+  const [loading, setLoading] = useState(false)
     const [openResponse, setOpenResponse] = useState(false)
     const [checkNumber, setCheckNumber] = useState(0)
     const [predictionInfo, setPredictionInfo] = useState("")
@@ -75,6 +77,7 @@ export default function Main() {
             return;
         }
         setGlobalError('')
+        setLoading(true)
         const data: Obesity = { ...personalDetails, ...eatingHabits, ...dailyActivity1, ...dailyActivity2 }
         const apiInput: APIInput = {
             Gender: data.gender,
@@ -99,9 +102,11 @@ export default function Main() {
             const recommend = await recommendationAction(apiInput)
             setPredictionInfo(formatObesityLevel(pred.prediction))
             setRecommendationInfo(recommend.recommendation)
+            setLoading(false)
             setOpenResponse(true)
         }
         catch (e) {
+          setLoading(false)
             throw new Error("Couldn't process data")
         }
     }
@@ -182,6 +187,9 @@ export default function Main() {
                     {checkNumber === 3 && <DailyActivity2 data={dailyActivity2} setData={setDailyActivity2} onSave={handleSave} onClose={handleClose} />}
                 </Box>
 
+            </Modal>
+            <Modal open={loading}>
+              <Loading />
             </Modal>
             <Modal open={openResponse} onClose={handleCloseResponse}>
                 <Box sx={modalStyle}>
