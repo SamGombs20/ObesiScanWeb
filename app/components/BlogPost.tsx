@@ -27,7 +27,7 @@ export const BlogPost: FC<BlogPost> = (blogPost) => {
       variants={itemVariants}
       whileHover={{
         y: -1,
-        scale: 1.02,
+        scale: 1.01,
         transition: { duration: 0.3, ease: "easeInOut" },
       }}
       whileTap={{ scale: 0.98 }}
