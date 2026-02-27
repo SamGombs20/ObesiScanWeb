@@ -16,6 +16,7 @@
     "@mui/material-nextjs": "^7.3.6",
     "@portabletext/react": "^6.0.2",
     "lottie-react": "^2.4.1",
+    "motion": "^12.34.3",
     "next": "^16.0.10",
     "react": "19.2.1",
     "react-dom": "19.2.1",
