@@ -14,18 +14,25 @@ const itemVariants: Variants = {
 };
 
 export const BlogPost: FC<BlogPost> = (blogPost) => {
+    
+    const navigateToBlogDetail =(link:string)=>{
+        setTimeout(() => {
+            window.location.href = link;
+        }, 300);
+    }
   return (
     <motion.div
       initial="hidden"
       whileInView="visible"
       variants={itemVariants}
       whileHover={{
-        y: -8,
+        y: -1,
         scale: 1.02,
-        transition: { duration: 0.3, ease: "easeOut" },
+        transition: { duration: 0.3, ease: "easeInOut" },
       }}
       whileTap={{ scale: 0.98 }}
       className={style.blog}
+      onClick={()=>navigateToBlogDetail(`/blog/${blogPost.slug}`)}
     >
       <div
         className={style.blog_image}

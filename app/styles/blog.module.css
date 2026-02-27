@@ -46,6 +46,7 @@
     border: 1px solid var(--custom-light-brown);
     border-radius: 1rem;
     padding-right: 0.5rem;
+    cursor: pointer;
 }
 .blog_image{
     max-width: 200px;
