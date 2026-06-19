@@ -30,12 +30,9 @@
     border-bottom: 5px solid var(--custom-brown);
 }
 .main_content_container{
-    display:flex;
-    flex-direction: column;
     border: 1px solid;
     padding: 1rem;
     border-radius: 1rem;
-    overflow-y:scroll;
 }
 .content_container{
     margin-bottom: 1rem;
@@ -51,6 +48,7 @@
 }
 .content{
     padding: 0.5rem;
+    overflow-y:scroll;
 }
 .title_text{
     border-bottom: none;
