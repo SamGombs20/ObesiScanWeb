@@ -18,6 +18,7 @@
 .response_container{
     color: var(--custom-brown);
     max-width: 500px;
+    max-height:70vh;
 }
 
 .form_title, .title_text{
