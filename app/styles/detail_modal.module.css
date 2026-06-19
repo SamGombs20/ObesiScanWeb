@@ -33,6 +33,7 @@
     border: 1px solid;
     padding: 1rem;
     border-radius: 1rem;
+    overflow-y:scroll;
 }
 .content_container{
     margin-bottom: 1rem;
